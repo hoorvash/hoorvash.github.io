@@ -3,75 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hoorvash's Portfolio</title>
+    <title>Portfolio</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f5f5f5;
-            text-align: center;
+            background: linear-gradient(to right, #1e3c72, #2a5298);
+            color: white;
         }
         header {
-            background-color: #333;
-            color: white;
-            padding: 20px;
-            font-size: 24px;
+            background: rgba(0, 0, 0, 0.85);
+            padding: 25px;
+            font-size: 36px;
+            font-weight: bold;
+            text-align: center;
+            letter-spacing: 1.5px;
         }
         .container {
-            max-width: 900px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: white;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
+            max-width: 1100px;
+            margin: 50px auto;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 12px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
         }
         .project {
-            margin-bottom: 20px;
-            padding: 15px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            background-color: #fafafa;
+            margin-bottom: 25px;
+            padding: 25px;
+            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.2);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+        .project:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
         }
         .project h2 {
-            color: #333;
+            color: #fecd57;
+            font-size: 24px;
+            margin-bottom: 10px;
         }
-        .project a {
-            color: #007bff;
-            text-decoration: none;
-            font-weight: bold;
+        .project p {
+            color: #dcdcdc;
+            font-size: 16px;
+        }
+        .container h1 {
+            text-align: center;
+            font-size: 28px;
+            margin-bottom: 15px;
+            color: #ffdd57;
+        }
+        .container p {
+            text-align: center;
+            font-size: 18px;
+            color: #ffffff;
+            margin-bottom: 30px;
         }
     </style>
 </head>
 <body>
-    <header>Hoorvash's GitHub Portfolio</header>
+    <header>Hoorvash's Professional Portfolio</header>
     <div class="container">
         <h1>Welcome to My Portfolio</h1>
-        <p>Here are some of my key projects demonstrating my skills in software development, machine learning, and AI.</p>
+        <p>Explore my ML/software development work, and cutting-edge AI implementations.</p>
         
         <div class="project">
             <h2>AI-Powered Code Summarizer & Query Tool</h2>
-            <p>Analyzes Java projects and answers questions using Retrieval-Augmented Generation (RAG).</p>
+            <p>Utilizes advanced LLMs and RAG technology to analyze and summarize Java projects.</p>
+        </div>
+
+        <div class="project">
+            <h2>Real-Time Payment Processing System</h2>
+            <p>Developed a high-availability distributed payment system using Java, Kafka, and AWS Lambda.</p>
+        </div>
+        
+        <div class="project">
+            <h2>Risk Analysis and Visualization Dashboard</h2>
+            <p>Implemented a visualization tool for risk factors in financial applications using Python and FastAPI.</p>
         </div>
         
         <div class="project">
             <h2>AdTech Campaign Management Simulator</h2>
-            <p>A backend service simulating ad campaign setup and event-driven targeting.</p>
+            <p>Designed for real-time ad targeting, event-driven insights, and optimized campaign strategies.</p>
         </div>
         
         <div class="project">
-            <h2>ML-Based Risk Management Data Analyzer</h2>
-            <p>Analyzes anonymized risk management data and generates insights.</p>
+            <h2>Risk Management Data Analyzer</h2>
+            <p>Processes anonymized risk data and generates actionable insights for risk mitigation.</p>
         </div>
-        
-        <div class="project">
-            <h2>Chrome Extension: AI Product Review Summarizer</h2>
-            <p>Summarizes product reviews using a fine-tuned LLM.</p>
-        </div>
-        
+              
         <div class="project">
             <h2>Japandi-Style Room Design AI</h2>
-            <p>Transforms room layouts into Japandi-style designs using AI.</p>
+            <p>Leverages generative AI to transform room layouts into stylish Japandi-inspired designs.</p>
         </div>
     </div>
 </body>
