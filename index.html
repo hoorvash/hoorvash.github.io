@@ -1,103 +1,201 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-            margin: 0;
-            padding: 0;
-            background: linear-gradient(to right, #1e3c72, #2a5298);
-            color: white;
-        }
-        header {
-            background: rgba(0, 0, 0, 0.85);
-            padding: 25px;
-            font-size: 36px;
-            font-weight: bold;
-            text-align: center;
-            letter-spacing: 1.5px;
-        }
-        .container {
-            max-width: 1100px;
-            margin: 50px auto;
-            padding: 30px;
-            background: rgba(255, 255, 255, 0.15);
-            border-radius: 12px;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-            backdrop-filter: blur(10px);
-        }
-        .project {
-            margin-bottom: 25px;
-            padding: 25px;
-            border-radius: 12px;
-            background: rgba(255, 255, 255, 0.2);
-            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-        }
-        .project:hover {
-            transform: scale(1.05);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-        }
-        .project h2 {
-            color: #fecd57;
-            font-size: 24px;
-            margin-bottom: 10px;
-        }
-        .project p {
-            color: #dcdcdc;
-            font-size: 16px;
-        }
-        .container h1 {
-            text-align: center;
-            font-size: 28px;
-            margin-bottom: 15px;
-            color: #ffdd57;
-        }
-        .container p {
-            text-align: center;
-            font-size: 18px;
-            color: #ffffff;
-            margin-bottom: 30px;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hoorvash | Software Engineer &amp; AI Innovator</title>
+  <!-- Import Google Font "Poppins" -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet">
+  <style>
+    /* Reset & Box Sizing */
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Define color variables */
+    :root {
+      --primary: #6A0DAD;      /* Purple accent */
+      --secondary: #FFDD00;    /* Yellow accent for glow */
+      --white: #ffffff;        /* White background */
+      --gray: #f4f4f4;         /* Light gray for borders */
+      --text: #333333;         /* Dark text for readability */
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--white);
+      color: var(--text);
+      line-height: 1.6;
+      min-height: 100vh;
+      padding-bottom: 2rem;
+    }
+
+    /* Header Styles */
+    header {
+      background: var(--white);
+      padding: 2rem 1rem;
+      text-align: center;
+      border-bottom: 3px solid var(--primary);
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      color: var(--text);
+    }
+
+    /* Main container */
+    .container {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    /* Section Titles */
+    .section-title {
+      text-align: center;
+      margin-bottom: 1rem;
+      font-size: 2rem;
+      color: var(--primary);
+    }
+    
+    .section-subtitle {
+      text-align: center;
+      margin-bottom: 2rem;
+      font-size: 1rem;
+      color: var(--text);
+    }
+
+    /* About Section */
+    .about {
+      margin-bottom: 3rem;
+    }
+
+    .about p {
+      max-width: 800px;
+      margin: 0 auto;
+      font-size: 1.1rem;
+      line-height: 1.8;
+      text-align: justify;
+    }
+
+    /* Projects Grid */
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    /* Project Card Styles */
+    .project-card {
+      background: var(--white);
+      border: 1px solid var(--gray);
+      border-radius: 10px;
+      padding: 1.5rem;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-3px);
+      border-color: var(--secondary);
+      box-shadow: 0 0 10px var(--secondary);
+    }
+
+    .project-card h2 {
+      font-size: 1.5rem;
+      margin-bottom: 0.8rem;
+      color: var(--primary);
+    }
+
+    .project-card p {
+      font-size: 1rem;
+      color: var(--text);
+    }
+
+    /* Responsive Adjustments */
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      header p {
+        font-size: 1rem;
+      }
+      .section-title {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
 </head>
 <body>
-    <header>Hoorvash's Professional Portfolio</header>
-    <div class="container">
-        <h1>Welcome to My Portfolio</h1>
-        <p>Explore my ML/software development work, and cutting-edge AI implementations.</p>
-        
-        <div class="project">
-            <h2>AI-Powered Code Summarizer & Query Tool</h2>
-            <p>Utilizes advanced LLMs and RAG technology to analyze and summarize Java projects.</p>
+  <!-- Header Section -->
+  <header>
+    <h1>Hoorvash</h1>
+    <p>Software Engineer &amp; AI Innovator – Crafting data-driven solutions for modern challenges.</p>
+  </header>
+  
+  <!-- Main Content -->
+  <main class="container">
+    <!-- About Section -->
+    <section class="about">
+      <h2 class="section-title">About Me</h2>
+      <p>
+        I am a seasoned software engineer with expertise in machine learning, data analytics, and scalable system design. My work bridges the gap between innovative research and real-world application, allowing organizations to harness technology for measurable impact. Whether refining existing solutions or pioneering new approaches, I am dedicated to delivering excellence through thoughtful, creative problem-solving.
+      </p>
+    </section>
+    
+    <!-- Projects Section -->
+    <section>
+      <h2 class="section-title">Selected Projects</h2>
+      <p class="section-subtitle">
+        A curated collection of projects that reflect my technical prowess and innovative approach.
+      </p>
+      <div class="projects">
+        <div class="project-card">
+          <h2>Intelligent Code Analysis Platform</h2>
+          <p>
+            Leveraging state-of-the-art language models and retrieval techniques, this platform analyzes and summarizes large-scale Java codebases, enhancing developer productivity and code maintainability.
+          </p>
         </div>
-
-        <div class="project">
-            <h2>Real-Time Payment Processing System</h2>
-            <p>Developed a high-availability distributed payment system using Java, Kafka, and AWS Lambda.</p>
+        <div class="project-card">
+          <h2>High-Availability Payment Architecture</h2>
+          <p>
+            Engineered a robust distributed payment processing system using Java, Kafka, and AWS Lambda to ensure real-time transaction handling and operational scalability.
+          </p>
         </div>
-        
-        <div class="project">
-            <h2>Risk Analysis and Visualization Dashboard</h2>
-            <p>Implemented a visualization tool for risk factors in financial applications using Python and FastAPI.</p>
+        <div class="project-card">
+          <h2>Risk Visualization &amp; Analytics Dashboard</h2>
+          <p>
+            Designed an interactive dashboard using Python and FastAPI that visualizes complex risk factors, enabling data-driven decision-making in financial systems.
+          </p>
         </div>
-        
-        <div class="project">
-            <h2>AdTech Campaign Management Simulator</h2>
-            <p>Designed for real-time ad targeting, event-driven insights, and optimized campaign strategies.</p>
+        <div class="project-card">
+          <h2>AdTech Campaign Optimization Platform</h2>
+          <p>
+            Developed a real-time simulation tool that optimizes advertising campaigns by delivering actionable insights through event-driven analytics and strategic targeting.
+          </p>
         </div>
-        
-        <div class="project">
-            <h2>Risk Management Data Analyzer</h2>
-            <p>Processes anonymized risk data and generates actionable insights for risk mitigation.</p>
+        <div class="project-card">
+          <h2>Data-Driven Risk Management Analyzer</h2>
+          <p>
+            Created an analytical solution that processes anonymized risk data to deliver proactive insights and support effective threat mitigation strategies.
+          </p>
         </div>
-              
-        <div class="project">
-            <h2>Japandi-Style Room Design AI</h2>
-            <p>Leverages generative AI to transform room layouts into stylish Japandi-inspired designs.</p>
+        <div class="project-card">
+          <h2>Generative Room Design System</h2>
+          <p>
+            Developed a generative AI platform that transforms conventional room layouts into sophisticated, Japandi-inspired designs, blending aesthetic appeal with practical functionality.
+          </p>
         </div>
-    </div>
+      </div>
+    </section>
+  </main>
 </body>
 </html>
